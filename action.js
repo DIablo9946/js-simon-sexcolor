@@ -7,23 +7,25 @@
 // quali dei numeri da indovinare sono stati individuati;
 
 var casual, trentaSec, indovinati;
+var lista = [];
 
-trentaSec = 3 * 1000;
+trentaSec = 5 * 1000;
 indovinati = 0;
 
 for (var i = 0; i < 5; i++) {
   casual = Math.floor(Math.random() * 10) + 1;
+  lista.push(casual);
   alert(casual);
-  console.log(casual);
 }
+  console.log(lista);
 
 setTimeout(numInsert, trentaSec);
 function numInsert() {
 for (var i = 0; i < 5; i++) {
   var check = parseInt(prompt("Inserisci i numeri che hai visto precedentemente"));
-  if (check ===casual) {
+  if (lista.includes(check)) {
     indovinati = indovinati + 1;
-    console.log("Punteggio è " + indovinati + " e numero indovinato è " + casual);
+    console.log("Punteggio è " + indovinati + " e numero indovinato è " + check);
   }
 }
 }
