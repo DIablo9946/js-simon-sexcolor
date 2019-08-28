@@ -17,9 +17,9 @@ var stampa = document.getElementById('my');
 console.log(chiediNome + " " + chiediSesso + " ");
 
 if (chiediSesso === "maschio") {
-  var coloreNome = chiediNome.style.color = "blue";
+  stampa.style.color = "blue";
 } if (chiediSesso === "femmina") {
-  var coloreNome = chiediNome.style.color = "pink";
+  stampa.style.color = "pink";
 }
 
-stampa.innerHTML = "Ciao " + coloreNome;
+stampa.innerHTML = "Ciao " + chiediNome;

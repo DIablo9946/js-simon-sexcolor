@@ -24,7 +24,7 @@ function numInsert() {
 for (var i = 0; i < 5; i++) {
   var check = parseInt(prompt("Inserisci i numeri che hai visto precedentemente"));
   if (lista.includes(check)) {
-    indovinati = indovinati + 1;
+    indovinati++;
     console.log("Punteggio è " + indovinati + " e numero indovinato è " + check);
   }
 }
